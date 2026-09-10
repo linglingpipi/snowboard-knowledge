@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>进阶检查表 · 单板滑雪教练知识库</title>
+<meta name="description" content="工具 检查表 进阶 教练"/>
+<link rel="stylesheet" href="../assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+<div class="app">
+  <nav id="toc" aria-label="站点导航"><div class="toc-inner"><div class="toc-page"><div class="toc-page-title">本文目录</div><a class="toc-anchor" href="#sec-2">新手 → 换刃 检查</a><a class="toc-anchor" href="#sec-3">换刃 → 基础刻滑</a><a class="toc-anchor" href="#sec-4">刻滑进阶</a><a class="toc-anchor" href="#sec-5">教练能力（对应考证）</a><a class="toc-anchor" href="#sec-6">相关</a></div><details><summary>🏠 首页</summary><a class="toc-link" href="../index.html">知识库首页</a></details><details><summary>地基层 · 术语/概念/进阶图</summary><a class="toc-link" href="../00-foundation/core-models.html">共享概念层（核心动作模型）</a><a class="toc-link" href="../00-foundation/glossary.html">术语词典（中英日对照）</a><a class="toc-link" href="../00-foundation/progression-map.html">跨模块进阶路径图</a></details><details><summary>体系层 · 全球教学体系</summary><a class="toc-link" href="../01-systems/asia.html">亚洲教学体系概览（日/韩/中）</a><a class="toc-link" href="../01-systems/austria-apsi.html">奥地利体系详解（阿尔卑斯高山传统）</a><a class="toc-link" href="../01-systems/canada-casi.html">加拿大体系详解（CASI 单板）</a><a class="toc-link" href="../01-systems/comparison.html">各体系等级对照与定位</a><a class="toc-link" href="../01-systems/europe.html">欧洲教学体系概览（奥/法/意/德/瑞/英/北欧）</a><a class="toc-link" href="../01-systems/japan-jsba.html">日本体系详解（JSBA / JSAA）</a><a class="toc-link" href="../01-systems/korea-ksia.html">韩式体系详解（KSIA 与韩式刻滑）</a><a class="toc-link" href="../01-systems/north-america.html">北美教学体系概览（美国 / 加拿大）</a><a class="toc-link" href="../01-systems/overview.html">全球滑雪教学体系全景导论</a><a class="toc-link" href="../01-systems/usa-aasi.html">美国体系详解（AASI 单板）</a></details><details><summary>韩式刻滑</summary><a class="toc-link" href="../02-korean-carving/compression-extension.html">韩式刻滑·团身与压缩伸展</a><a class="toc-link" href="../02-korean-carving/edge-pressure.html">韩式刻滑·刃角控制与压力管理</a><a class="toc-link" href="../02-korean-carving/posture-drive.html">韩式刻滑·基本姿态与发力方式</a></details><details><summary>JSBA 体系</summary><a class="toc-link" href="../03-jsba-system/carving-relationship.html">JSBA 与韩式刻滑的关系（含搓雪 vs 刻滑 对照）</a><a class="toc-link" href="../03-jsba-system/core-concepts.html">JSBA 体系·核心概念</a><a class="toc-link" href="../03-jsba-system/level-framework.html">JSBA 动作模式与教学进阶</a></details><details><summary>公园自由式</summary><a class="toc-link" href="../04-freestyle-park/box-rail-path.html">Box / Rail 路径·入门到进阶</a><a class="toc-link" href="../04-freestyle-park/freestyle-basics.html">公园自由式·基本功</a><a class="toc-link" href="../04-freestyle-park/jump-path.html">跳台路径·从入门到进阶</a><a class="toc-link" href="../04-freestyle-park/safety.html">公园自由式·安全与责任</a></details><details><summary>初学者教学法</summary><a class="toc-link" href="../05-teaching/error-correction.html">常见错误与纠正</a><a class="toc-link" href="../05-teaching/learning-sequence.html">初学者·学习顺序</a><a class="toc-link" href="../05-teaching/teaching-points.html">05·教学要点</a></details><details><summary>补充科目</summary><a class="toc-link" href="../06-specialties/specialties-overview.html">补充科目（概述）</a></details><details open><summary>教练工具箱</summary><a class="toc-link" href="../07-toolbox/cue-cards.html">Cue 卡（教练课堂口令）</a><a class="toc-link" href="../07-toolbox/lesson-plan-template.html">教案模板</a><a class="toc-link active" href="../07-toolbox/progression-checklist.html">进阶检查表</a><a class="toc-link" href="../07-toolbox/resources.html">参考资料与学习路线（教练备考）</a></details><details><summary>原理收束</summary><a class="toc-link" href="../08-core-principles/principles.html">底层原理收束章（共通滑雪框架）</a></details></div></nav>
+  <main class="content">
+    <div class="toolbar">
+      <button id="menuToggle" class="icon-btn" title="展开目录" aria-label="展开目录">☰</button>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="搜索术语 / 主题…（按 / 快捷聚焦）" autocomplete="off"/>
+        <kbd class="search-kbd">/</kbd>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+    </div>
+    <div id="searchResults" class="search-results" hidden></div>
+    <article class="article">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="../assets/index.html">知识库</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">教练工具箱</span>
+      </nav>
+      <header class="article-header">
+        <h1>进阶检查表</h1>
+        <div class="tagline"><span class="tag">工具</span><span class="tag">检查表</span><span class="tag">进阶</span><span class="tag">教练</span></div>
+      </header>
+      <h1 id="sec-1">进阶检查清单（学员能力检表）</h1><div class="spacer"></div><p>用于课堂、一阶段结束或自行评估学员/自己的进阶情况。把「会不会」落成可勾选项，便于追踪与备课。</p><div class="spacer"></div><blockquote>用法：给每项打 ✓/△/✗；△=会但不稳。连续几课出现 ∆→ 回退加固，见 <a class="wikilink" href="../05-teaching/error-correction.html">纠错</a>。 </blockquote><div class="spacer"></div><div class="spacer"></div><h2 id="sec-2">新手 → 换刃 检查</h2><ul><li>[ ] 能穿板、安全站立/起步</li><li>[ ] 直滑保持平衡，重心不后仰</li><li>[ ] 会用后脚跟刃刹停（控速）</li><li>[ ] 落叶飘两向（前/后刃横滑可控）</li><li>[ ] 完成基础换刃（前↔后）不断骨</li><li>[ ] 换刃时机、视线引导正确</li></ul><div class="spacer"></div><h2 id="sec-3">换刃 → 基础刻滑</h2><ul><li>[ ] 换刃流畅地理（无咯噔）</li><li>[ ] 转弯能带上刃、缩短半径</li><li>[ ] 能从蓝道连续小回转</li><li>[ ] 熟悉搓雪到刻滑的过渡感觉（<a class="wikilink" href="../00-foundation/core-models.html">刃角</a>）</li></ul><div class="spacer"></div><h2 id="sec-4">刻滑进阶</h2><ul><li>[ ] 刃角足够、弯弧完整</li><li>[ ] 压力管理（加压/释压）时机</li><li>[ ] 团身/压缩伸展已用（韩式）、[平行基础好]</li><li>[ ] 速度曲线可控、敢入山</li></ul><div class="spacer"></div><h2 id="sec-5">教练能力（对应考证）</h2><ul><li>[ ] 能讲清一个动作的 why（根因）</li><li>[ ] 能示范 + 给有效 cue（<a class="wikilink" href="../07-toolbox/cue-cards.html">cue 卡</a>）</li><li>[ ] 能安全带初级课（<span class="badge">教学法</span>）</li><li>[ ] 会诊断 3 大根因、一次纠一点</li></ul><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-6">相关</h2><ul><li>教案 <a class="wikilink" href="../07-toolbox/lesson-plan-template.html">教案</a>、<a class="wikilink" href="../07-toolbox/cue-cards.html">cue 卡</a></li><li>纠错表 <a class="wikilink" href="../05-teaching/error-correction.html">error-correction</a></li></ul>
+      <footer class="pager">
+        <span class="pager-note">教练工具箱 · 进阶检查表</span>
+      </footer>
+    </article>
+  </main>
+</div>
+<button id="topBtn" class="top-btn" title="返回顶部" aria-label="返回顶部" hidden>↑</button>
+<script src="../assets/app.js"></script>
+</body>
+</html>

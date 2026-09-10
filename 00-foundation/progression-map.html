@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>跨模块进阶路径图 · 单板滑雪教练知识库</title>
+<meta name="description" content="进阶 路径 地基 教练培养"/>
+<link rel="stylesheet" href="../assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+<div class="app">
+  <nav id="toc" aria-label="站点导航"><div class="toc-inner"><div class="toc-page"><div class="toc-page-title">本文目录</div><a class="toc-anchor" href="#sec-2">能力进阶总览</a><a class="toc-anchor" href="#sec-3">模块 → 技能映射</a><a class="toc-anchor" href="#sec-4">递进路径（推荐学习顺序）</a><a class="toc-anchor" href="#sec-5">相关</a></div><details><summary>🏠 首页</summary><a class="toc-link" href="../index.html">知识库首页</a></details><details open><summary>地基层 · 术语/概念/进阶图</summary><a class="toc-link" href="../00-foundation/core-models.html">共享概念层（核心动作模型）</a><a class="toc-link" href="../00-foundation/glossary.html">术语词典（中英日对照）</a><a class="toc-link active" href="../00-foundation/progression-map.html">跨模块进阶路径图</a></details><details><summary>体系层 · 全球教学体系</summary><a class="toc-link" href="../01-systems/asia.html">亚洲教学体系概览（日/韩/中）</a><a class="toc-link" href="../01-systems/austria-apsi.html">奥地利体系详解（阿尔卑斯高山传统）</a><a class="toc-link" href="../01-systems/canada-casi.html">加拿大体系详解（CASI 单板）</a><a class="toc-link" href="../01-systems/comparison.html">各体系等级对照与定位</a><a class="toc-link" href="../01-systems/europe.html">欧洲教学体系概览（奥/法/意/德/瑞/英/北欧）</a><a class="toc-link" href="../01-systems/japan-jsba.html">日本体系详解（JSBA / JSAA）</a><a class="toc-link" href="../01-systems/korea-ksia.html">韩式体系详解（KSIA 与韩式刻滑）</a><a class="toc-link" href="../01-systems/north-america.html">北美教学体系概览（美国 / 加拿大）</a><a class="toc-link" href="../01-systems/overview.html">全球滑雪教学体系全景导论</a><a class="toc-link" href="../01-systems/usa-aasi.html">美国体系详解（AASI 单板）</a></details><details><summary>韩式刻滑</summary><a class="toc-link" href="../02-korean-carving/compression-extension.html">韩式刻滑·团身与压缩伸展</a><a class="toc-link" href="../02-korean-carving/edge-pressure.html">韩式刻滑·刃角控制与压力管理</a><a class="toc-link" href="../02-korean-carving/posture-drive.html">韩式刻滑·基本姿态与发力方式</a></details><details><summary>JSBA 体系</summary><a class="toc-link" href="../03-jsba-system/carving-relationship.html">JSBA 与韩式刻滑的关系（含搓雪 vs 刻滑 对照）</a><a class="toc-link" href="../03-jsba-system/core-concepts.html">JSBA 体系·核心概念</a><a class="toc-link" href="../03-jsba-system/level-framework.html">JSBA 动作模式与教学进阶</a></details><details><summary>公园自由式</summary><a class="toc-link" href="../04-freestyle-park/box-rail-path.html">Box / Rail 路径·入门到进阶</a><a class="toc-link" href="../04-freestyle-park/freestyle-basics.html">公园自由式·基本功</a><a class="toc-link" href="../04-freestyle-park/jump-path.html">跳台路径·从入门到进阶</a><a class="toc-link" href="../04-freestyle-park/safety.html">公园自由式·安全与责任</a></details><details><summary>初学者教学法</summary><a class="toc-link" href="../05-teaching/error-correction.html">常见错误与纠正</a><a class="toc-link" href="../05-teaching/learning-sequence.html">初学者·学习顺序</a><a class="toc-link" href="../05-teaching/teaching-points.html">05·教学要点</a></details><details><summary>补充科目</summary><a class="toc-link" href="../06-specialties/specialties-overview.html">补充科目（概述）</a></details><details><summary>教练工具箱</summary><a class="toc-link" href="../07-toolbox/cue-cards.html">Cue 卡（教练课堂口令）</a><a class="toc-link" href="../07-toolbox/lesson-plan-template.html">教案模板</a><a class="toc-link" href="../07-toolbox/progression-checklist.html">进阶检查表</a><a class="toc-link" href="../07-toolbox/resources.html">参考资料与学习路线（教练备考）</a></details><details><summary>原理收束</summary><a class="toc-link" href="../08-core-principles/principles.html">底层原理收束章（共通滑雪框架）</a></details></div></nav>
+  <main class="content">
+    <div class="toolbar">
+      <button id="menuToggle" class="icon-btn" title="展开目录" aria-label="展开目录">☰</button>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="搜索术语 / 主题…（按 / 快捷聚焦）" autocomplete="off"/>
+        <kbd class="search-kbd">/</kbd>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+    </div>
+    <div id="searchResults" class="search-results" hidden></div>
+    <article class="article">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="../assets/index.html">知识库</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">地基层 · 术语/概念/进阶图</span>
+      </nav>
+      <header class="article-header">
+        <h1>跨模块进阶路径图</h1>
+        <div class="tagline"><span class="tag">进阶</span><span class="tag">路径</span><span class="tag">地基</span><span class="tag">教练培养</span></div>
+      </header>
+      <h1 id="sec-1">跨模块进阶路径图</h1><div class="spacer"></div><p>本页把全库的<strong>内容模块</strong>与<strong>能力进阶</strong>串成路径，作为「从会滑到会教」的导航图。新增模块务必登记于此，维护全库的进阶一致性。核心术语与概念口径见 <span class="badge">glossary.md</span> 与 <span class="badge">core-models.md</span>。</p><div class="spacer"></div><h2 id="sec-2">能力进阶总览</h2><div class="spacer"></div><div class="mermaid-wrap"><pre class="mermaid">flowchart LR
+  subgraph 地基
+    G[术语/核心模型 common]
+    P[进阶路径]
+  end
+  subgraph 会滑（已有基础）
+    S1[可控转弯]
+    S2[正身相稳健]
+  end
+  subgraph 专项能力
+    C1[韩式刻滑] -.受刃/压刃.-&gt; C2[JSBA 基础并行]
+    C2 --&gt; C3[公园自由-Wark]
+  end
+  subgraph 教学能力
+    T1[初学者教学法]
+    T2[错误诊断与纠正]
+    T3[教案/工具箱]
+  end
+  subgraph 成为教练
+    L1[认证等级]
+  end
+
+  G --&gt; S1
+  S1 --&gt; C1
+  S1 --&gt; C2
+  C1 --&gt; T1
+  C2 --&gt; T1
+  C3 --&gt; T2
+  T1 --&gt; T3
+  T2 --&gt; T3
+  T3 --&gt; L</pre></div><div class="spacer"></div><h2 id="sec-3">模块 → 技能映射</h2><div class="spacer"></div><table><thead><tr><th>目录</th><th>对应技能</th><th>完成标志（会教）</th></tr></thead><tbody><tr><td><code>00-foundation</code></td><td>共用语言（术语/模型）</td><td>能不借助笔记解释 4 条主轴</td></tr><tr><td><code>01-systems</code></td><td>体系观念（韩/JP/美/加/奥）</td><td>能比较两体系的收费取向</td></tr><tr><td><code>02-korean-carving</code></td><td>刻滑动作模型（姿态/刃/压力/压缩）</td><td>能给他人拆解刻滑要点</td></tr><tr><td><code>03-jsba-system</code></td><td>JSBA 概念与等级</td><td>能对应等级给学员档位</td></tr><tr><td><code>04-freestyle-park</code></td><td>公园跳台/box/rail 安全进阶</td><td>能规划安全的第一步练习</td></tr><tr><td><code>05-teaching</code></td><td>教学顺序/要点/纠错</td><td>能完整上一堂初学课</td></tr><tr><td><code>06-specialties</code></td><td>竞技/越野/登山（概览）</td><td>能判断适合交否给专项教练</td></tr><tr><td><code>07-toolbox</code></td><td>教案/卡/清单</td><td>能快速备课与落地课</td></tr><tr><td><code>08-core-principles</code></td><td>底层框架跨体对照</td><td>能把任何新体系归入原有框架</td></tr></tbody></table><div class="spacer"></div><h2 id="sec-4">递进路径（推荐学习顺序）</h2><div class="spacer"></div><div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+  A[00 地基层：术语+模型] --&gt; B[01 体系全景：明确目标体系]
+  B --&gt; C[02 韩式刻滑, 03 JSBA]
+  C --&gt; D[04 公园自由式（optional）]
+  B --&gt; E[05 教学法]
+  E --&gt; F[07 工具箱]
+  D --&gt; F
+  F --&gt; G[08 原理：收束 + 跨体系对照]
+  G --&gt; H[认证/去教学]</pre></div><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-5">相关</h2><div class="spacer"></div><ul><li>概念口径：<span class="badge">core-models.md</span></li><li>术语：[glossary.md]]</li></ul>
+      <footer class="pager">
+        <span class="pager-note">地基层 · 术语/概念/进阶图 · 跨模块进阶路径图</span>
+      </footer>
+    </article>
+  </main>
+</div>
+<button id="topBtn" class="top-btn" title="返回顶部" aria-label="返回顶部" hidden>↑</button>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>术语词典（中英日对照） · 单板滑雪教练知识库</title>
+<meta name="description" content="术语 词典 地基"/>
+<link rel="stylesheet" href="../assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+<div class="app">
+  <nav id="toc" aria-label="站点导航"><div class="toc-inner"><div class="toc-page"><div class="toc-page-title">本文目录</div><a class="toc-anchor" href="#sec-2">姿态与身体</a><a class="toc-anchor" href="#sec-3">刃与转向</a><a class="toc-anchor" href="#sec-4">压力与发力</a><a class="toc-anchor" href="#sec-5">旋转与动作机制</a><a class="toc-anchor" href="#sec-6">体系与教学</a><a class="toc-anchor" href="#sec-7">相关</a></div><details><summary>🏠 首页</summary><a class="toc-link" href="../index.html">知识库首页</a></details><details open><summary>地基层 · 术语/概念/进阶图</summary><a class="toc-link" href="../00-foundation/core-models.html">共享概念层（核心动作模型）</a><a class="toc-link active" href="../00-foundation/glossary.html">术语词典（中英日对照）</a><a class="toc-link" href="../00-foundation/progression-map.html">跨模块进阶路径图</a></details><details><summary>体系层 · 全球教学体系</summary><a class="toc-link" href="../01-systems/asia.html">亚洲教学体系概览（日/韩/中）</a><a class="toc-link" href="../01-systems/austria-apsi.html">奥地利体系详解（阿尔卑斯高山传统）</a><a class="toc-link" href="../01-systems/canada-casi.html">加拿大体系详解（CASI 单板）</a><a class="toc-link" href="../01-systems/comparison.html">各体系等级对照与定位</a><a class="toc-link" href="../01-systems/europe.html">欧洲教学体系概览（奥/法/意/德/瑞/英/北欧）</a><a class="toc-link" href="../01-systems/japan-jsba.html">日本体系详解（JSBA / JSAA）</a><a class="toc-link" href="../01-systems/korea-ksia.html">韩式体系详解（KSIA 与韩式刻滑）</a><a class="toc-link" href="../01-systems/north-america.html">北美教学体系概览（美国 / 加拿大）</a><a class="toc-link" href="../01-systems/overview.html">全球滑雪教学体系全景导论</a><a class="toc-link" href="../01-systems/usa-aasi.html">美国体系详解（AASI 单板）</a></details><details><summary>韩式刻滑</summary><a class="toc-link" href="../02-korean-carving/compression-extension.html">韩式刻滑·团身与压缩伸展</a><a class="toc-link" href="../02-korean-carving/edge-pressure.html">韩式刻滑·刃角控制与压力管理</a><a class="toc-link" href="../02-korean-carving/posture-drive.html">韩式刻滑·基本姿态与发力方式</a></details><details><summary>JSBA 体系</summary><a class="toc-link" href="../03-jsba-system/carving-relationship.html">JSBA 与韩式刻滑的关系（含搓雪 vs 刻滑 对照）</a><a class="toc-link" href="../03-jsba-system/core-concepts.html">JSBA 体系·核心概念</a><a class="toc-link" href="../03-jsba-system/level-framework.html">JSBA 动作模式与教学进阶</a></details><details><summary>公园自由式</summary><a class="toc-link" href="../04-freestyle-park/box-rail-path.html">Box / Rail 路径·入门到进阶</a><a class="toc-link" href="../04-freestyle-park/freestyle-basics.html">公园自由式·基本功</a><a class="toc-link" href="../04-freestyle-park/jump-path.html">跳台路径·从入门到进阶</a><a class="toc-link" href="../04-freestyle-park/safety.html">公园自由式·安全与责任</a></details><details><summary>初学者教学法</summary><a class="toc-link" href="../05-teaching/error-correction.html">常见错误与纠正</a><a class="toc-link" href="../05-teaching/learning-sequence.html">初学者·学习顺序</a><a class="toc-link" href="../05-teaching/teaching-points.html">05·教学要点</a></details><details><summary>补充科目</summary><a class="toc-link" href="../06-specialties/specialties-overview.html">补充科目（概述）</a></details><details><summary>教练工具箱</summary><a class="toc-link" href="../07-toolbox/cue-cards.html">Cue 卡（教练课堂口令）</a><a class="toc-link" href="../07-toolbox/lesson-plan-template.html">教案模板</a><a class="toc-link" href="../07-toolbox/progression-checklist.html">进阶检查表</a><a class="toc-link" href="../07-toolbox/resources.html">参考资料与学习路线（教练备考）</a></details><details><summary>原理收束</summary><a class="toc-link" href="../08-core-principles/principles.html">底层原理收束章（共通滑雪框架）</a></details></div></nav>
+  <main class="content">
+    <div class="toolbar">
+      <button id="menuToggle" class="icon-btn" title="展开目录" aria-label="展开目录">☰</button>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="搜索术语 / 主题…（按 / 快捷聚焦）" autocomplete="off"/>
+        <kbd class="search-kbd">/</kbd>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+    </div>
+    <div id="searchResults" class="search-results" hidden></div>
+    <article class="article">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="../assets/index.html">知识库</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">地基层 · 术语/概念/进阶图</span>
+      </nav>
+      <header class="article-header">
+        <h1>术语词典（中英日对照）</h1>
+        <div class="tagline"><span class="tag">术语</span><span class="tag">词典</span><span class="tag">地基</span></div>
+      </header>
+      <h1 id="sec-1">术语词典</h1><div class="spacer"></div><p>本页为全库<strong>唯一术语口径</strong>。所有概念在 <code>00-foundation/core-models.md</code> 定义，术语在本页登记。各专项篇只能引用，不得重复定义。新增术语请在此登记后，链到对应的 <span class="badge">核心模型</span> 与模块页。</p><div class="spacer"></div><h2 id="sec-2">姿态与身体</h2><div class="spacer"></div><table><thead><tr><th>术语</th><th>英文</th><th>日文/外文</th><th>定义</th></tr></thead><tbody><tr><td>基本姿态</td><td>Basic / Athletic Stance</td><td>基本姿勢（きほんしせい）</td><td>双脚与肩同宽、屈膝屈髋、重心略前倾的可调节直立姿态，是滑行的通用起点。</td></tr><tr><td>前刃</td><td>Toe Edge</td><td>つま先側エッジ</td><td>板进入足尖一侧的刃，转弯与减速的关键受刃面之一。</td></tr><tr><td>后刃</td><td>Heel Edge</td><td>かかと側エッジ</td><td>板进入足跟一侧的刃，常用作控制/刹车/后压。</td></tr><tr><td>重心</td><td>Center of Mass / COG</td><td>重心（じゅうしん）</td><td>身体质量的合力作用点，滑行控制的核心参照。</td></tr><tr><td>垂直压缩</td><td>Flexion（vali）</td><td>压缩（あっしゅく）</td><td>屈膝屈髋降低重心的身体形态，用于蓄压。</td></tr><tr><td>伸展</td><td>Extension</td><td>伸展（しんてん）</td><td>伸直膝髋升高重心的身体形态，用于卸压/蓄势。</td></tr><tr><td>团身</td><td>Tuck / 収縮</td><td>团弧（だん）</td><td>高弯速下大幅屈曲重心靠向内侧的状态，主要用于高速刻滑的稳定加压。</td></tr></tbody></table><div class="spacer"></div><h2 id="sec-3">刃与转向</h2><div class="spacer"></div><table><thead><tr><th>术语</th><th>英文</th><th>日文</th><th>定义</th></tr></thead><tbody><tr><td>刻滑</td><td>Carving</td><td>カービング</td><td>使板显著受刃、沿刃走弯、雪上扬力驱动的果壳式转弯，刃痕细而深，不偏重拖曳。</td></tr><tr><td>刃角/倾角</td><td>Edge Angle</td><td>エッジアングル</td><td>板底面与雪面（含垂向）之间的夹角，决定受刃深度与弯弧半径。</td></tr><tr><td>换刃</td><td>Edge Change / T轉换</td><td>チェンジエッジ</td><td>由前刃到后刃（或反向）的状态过渡。</td></tr><tr><td>弯弯</td><td>Turn</td><td>左侧回旋/右剖面</td><td>由刃与重心主导的弧线路径，分为初阶段/控制阶段/出弯段。</td></tr><tr><td>轴转移</td><td>Pivot / 轴回</td><td>軸回転（じくかいてん）</td><td>以某点为轴旋转锐转，普通制动转向与回转。</td></tr><tr><td>搓雪</td><td>Skidding / 梃</td><td>板上げ（こすり）</td><td>板与雪发生相对横移的滑动转向，常用作控制与入门。</td></tr></tbody></table><div class="spacer"></div><h2 id="sec-4">压力与发力</h2><div class="spacer"></div><table><thead><tr><th>术语</th><th>英文</th><th>日文</th><th>定义</th></tr></thead><tbody><tr><td>加压</td><td>Pressure</td><td>押イ寸</td><td>通过体移/屈离雪面施加于板的垂直负载，改变弯弧与刃深浅。</td></tr><tr><td>压力管理</td><td>Pressure Management</td><td>转动管理</td><td>在换刃/入弯/出弯时刻对加压与减压节奏的主动控制。</td></tr><tr><td>站内移动</td><td>抬/压（Pressed）</td><td>ふみこみ</td><td>借助下肢膝盖与脚踝的有序移动，在未视觉状态下转移重心。</td></tr><tr><td>上身引导</td><td>Counter / 翻腕</td><td>カウンター</td><td>上下半身扭拧关系，为下一刃或旋转预创造条件。</td></tr></tbody></table><div class="spacer"></div><h2 id="sec-5">旋转与动作机制</h2><div class="spacer"></div><table><thead><tr><th>术语</th><th>英文</th><th>日文</th><th>定义</th></tr></thead><tbody><tr><td>旋转机制</td><td>Rotation / 捻り</td><td>回旋（かいせん）</td><td>下肢/骨盆/上半身参与驱动的定向身体旋转，控制弯的方向。</td></tr><tr><td>反扭（交叉连接</td><td>Counter-rotation / アヴ_記事）</td><td>反捻（はんねん）</td><td>上身保持面向滑行方向，下体转动刀刃的对拧，利于稳定与高速。</td></tr><tr><td>一动转腿/转向引导</td><td>Twist / 返り</td><td>ツイスト</td><td>下肢扭转带动板前端的功能小腿傲）。</td></tr></tbody></table><div class="spacer"></div><h2 id="sec-6">体系与教学</h2><div class="spacer"></div><table><thead><tr><th>术语</th><th>英文</th><th>日文/外文</th><th>定义</th></tr></thead><tbody><tr><td>教学 cue</td><td>Teaching Cue / 发导词</td><td>传导词</td><td>一句简洁口令或比喻，帮助学员瞬间抓到动作关键，如「脚跟压水」。</td></tr><tr><td>错误-根因-纠正</td><td>Error→Cause→Correct</td><td>教练诊断的标准流程：描述现象 → 找出因 → 给纠正</td></tr><tr><td>等级框架</td><td>Level / 段位</td><td>級/班</td><td>认证机构划分技术能力的分级体系（如 1-4 级）。</td></tr><tr><td>玩家谁</td><td>—</td><td>—</td><td>由滑雪队/校队出身者向「会教」过渡需补的教学能力。（预留占位）</td></tr></tbody></table><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-7">相关</h2><div class="spacer"></div><ul><li>概念定义见 <span class="badge">core-models.md</span>（共享概念层）</li><li>进阶路径见 <span class="badge">progression-map.md</span></li></ul>
+      <footer class="pager">
+        <span class="pager-note">地基层 · 术语/概念/进阶图 · 术语词典（中英日对照）</span>
+      </footer>
+    </article>
+  </main>
+</div>
+<button id="topBtn" class="top-btn" title="返回顶部" aria-label="返回顶部" hidden>↑</button>
+<script src="../assets/app.js"></script>
+</body>
+</html>

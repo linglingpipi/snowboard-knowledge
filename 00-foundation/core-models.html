@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>共享概念层（核心动作模型） · 单板滑雪教练知识库</title>
+<meta name="description" content="概念 模型 地基 重心 压力 刃 旋转"/>
+<link rel="stylesheet" href="../assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+<div class="app">
+  <nav id="toc" aria-label="站点导航"><div class="toc-inner"><div class="toc-page"><div class="toc-page-title">本文目录</div><a class="toc-anchor" href="#sec-2">四条底层主轴（核心分析坐标）</a><a class="toc-anchor toc-h3" href="#1">1. 重心控制</a><a class="toc-anchor toc-h3" href="#2">2. 压力管理</a><a class="toc-anchor toc-h3" href="#3">3. 刃的使用</a><a class="toc-anchor toc-h3" href="#4">4. 旋转机制</a><a class="toc-anchor toc-h3" href="#sec-7">图文示例｜主动转换与身体带动：</a><a class="toc-anchor" href="#sec-8">动作链（Common Action Chain）</a><a class="toc-anchor" href="#sec-9">规格与分维</a><a class="toc-anchor" href="#sec-10">相关</a></div><details><summary>🏠 首页</summary><a class="toc-link" href="../index.html">知识库首页</a></details><details open><summary>地基层 · 术语/概念/进阶图</summary><a class="toc-link active" href="../00-foundation/core-models.html">共享概念层（核心动作模型）</a><a class="toc-link" href="../00-foundation/glossary.html">术语词典（中英日对照）</a><a class="toc-link" href="../00-foundation/progression-map.html">跨模块进阶路径图</a></details><details><summary>体系层 · 全球教学体系</summary><a class="toc-link" href="../01-systems/asia.html">亚洲教学体系概览（日/韩/中）</a><a class="toc-link" href="../01-systems/austria-apsi.html">奥地利体系详解（阿尔卑斯高山传统）</a><a class="toc-link" href="../01-systems/canada-casi.html">加拿大体系详解（CASI 单板）</a><a class="toc-link" href="../01-systems/comparison.html">各体系等级对照与定位</a><a class="toc-link" href="../01-systems/europe.html">欧洲教学体系概览（奥/法/意/德/瑞/英/北欧）</a><a class="toc-link" href="../01-systems/japan-jsba.html">日本体系详解（JSBA / JSAA）</a><a class="toc-link" href="../01-systems/korea-ksia.html">韩式体系详解（KSIA 与韩式刻滑）</a><a class="toc-link" href="../01-systems/north-america.html">北美教学体系概览（美国 / 加拿大）</a><a class="toc-link" href="../01-systems/overview.html">全球滑雪教学体系全景导论</a><a class="toc-link" href="../01-systems/usa-aasi.html">美国体系详解（AASI 单板）</a></details><details><summary>韩式刻滑</summary><a class="toc-link" href="../02-korean-carving/compression-extension.html">韩式刻滑·团身与压缩伸展</a><a class="toc-link" href="../02-korean-carving/edge-pressure.html">韩式刻滑·刃角控制与压力管理</a><a class="toc-link" href="../02-korean-carving/posture-drive.html">韩式刻滑·基本姿态与发力方式</a></details><details><summary>JSBA 体系</summary><a class="toc-link" href="../03-jsba-system/carving-relationship.html">JSBA 与韩式刻滑的关系（含搓雪 vs 刻滑 对照）</a><a class="toc-link" href="../03-jsba-system/core-concepts.html">JSBA 体系·核心概念</a><a class="toc-link" href="../03-jsba-system/level-framework.html">JSBA 动作模式与教学进阶</a></details><details><summary>公园自由式</summary><a class="toc-link" href="../04-freestyle-park/box-rail-path.html">Box / Rail 路径·入门到进阶</a><a class="toc-link" href="../04-freestyle-park/freestyle-basics.html">公园自由式·基本功</a><a class="toc-link" href="../04-freestyle-park/jump-path.html">跳台路径·从入门到进阶</a><a class="toc-link" href="../04-freestyle-park/safety.html">公园自由式·安全与责任</a></details><details><summary>初学者教学法</summary><a class="toc-link" href="../05-teaching/error-correction.html">常见错误与纠正</a><a class="toc-link" href="../05-teaching/learning-sequence.html">初学者·学习顺序</a><a class="toc-link" href="../05-teaching/teaching-points.html">05·教学要点</a></details><details><summary>补充科目</summary><a class="toc-link" href="../06-specialties/specialties-overview.html">补充科目（概述）</a></details><details><summary>教练工具箱</summary><a class="toc-link" href="../07-toolbox/cue-cards.html">Cue 卡（教练课堂口令）</a><a class="toc-link" href="../07-toolbox/lesson-plan-template.html">教案模板</a><a class="toc-link" href="../07-toolbox/progression-checklist.html">进阶检查表</a><a class="toc-link" href="../07-toolbox/resources.html">参考资料与学习路线（教练备考）</a></details><details><summary>原理收束</summary><a class="toc-link" href="../08-core-principles/principles.html">底层原理收束章（共通滑雪框架）</a></details></div></nav>
+  <main class="content">
+    <div class="toolbar">
+      <button id="menuToggle" class="icon-btn" title="展开目录" aria-label="展开目录">☰</button>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="搜索术语 / 主题…（按 / 快捷聚焦）" autocomplete="off"/>
+        <kbd class="search-kbd">/</kbd>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+    </div>
+    <div id="searchResults" class="search-results" hidden></div>
+    <article class="article">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="../assets/index.html">知识库</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">地基层 · 术语/概念/进阶图</span>
+      </nav>
+      <header class="article-header">
+        <h1>共享概念层（核心动作模型）</h1>
+        <div class="tagline"><span class="tag">概念</span><span class="tag">模型</span><span class="tag">地基</span><span class="tag">重心</span><span class="tag">压力</span><span class="tag">刃</span><span class="tag">旋转</span></div>
+      </header>
+      <h1 id="sec-1">共享概念层</h1><div class="spacer"></div><p>本页定义全库反复引用的<strong>底层动作模型</strong>。这些模型不专属于某体系，而是各体系（韩式、JSBA、美/加/欧）共通的物理与体术基础。全库概念口径统一于本页，其他模块只能复用，不得另定义。</p><div class="spacer"></div><blockquote><strong>读法建议</strong>：模型要结合&quot;自检动作&quot;来理解（比如看刃线、看重心落点），不要当作纯名词背。每条主轴下都附有图文示意与常见纠错。 </blockquote><div class="spacer"></div><div class="spacer"></div><h2 id="sec-2">四条底层主轴（核心分析坐标）</h2><div class="spacer"></div><p>单板滑行的控制最终可归结为<strong>四条相互耦合的主轴</strong>。它们是后续所有专项（刻滑、回转、公园、教学）的分析坐标：</p><div class="spacer"></div><ol><li><strong>重心控制（CoM Control）</strong></li><li><strong>压力管理（Pressure Management）</strong></li><li><strong>刃的使用（Edge Use）</strong></li><li><strong>旋转机制（Rotation Mechanism）</strong></li></ol><div class="spacer"></div><p>延伸两个辅助轴：<strong>姿态/时机（Posture &amp; Timing）</strong> 与 <strong>肩/平衡（Alignment &amp; Balance）</strong>。</p><div class="spacer"></div><blockquote><strong>一句话理解</strong>：重心决定&quot;身体往哪片刃靠&quot;，压力决定&quot;刃是否被抓牢&quot;，刃决定&quot;画的是线还是面&quot;，旋转决定&quot;板头由谁带着走&quot;。四条叠加在同一套身体动作上。 </blockquote><div class="spacer"></div><div class="spacer"></div><hr/><div class="spacer"></div><h3 id="1">1. 重心控制</h3><div class="spacer"></div><ul><li><strong>定义</strong>：对整体重心位置、方向（内侧/外侧、低/高、前/后）主动而有目的的控制。</li><li><strong>子模型</strong>：</li><li><strong>重心投影（CoM Projection）</strong>：整体重心的垂直落点相对脚掌支撑面（base of support）的位置，决定负荷落在前脚还是后脚、偏哪条刃。这是&quot;重心交给哪只脚&quot;的物理基础。</li><li><strong>重心转移（Lateral）</strong>：踝→膝→髋→肩做<strong>整体一致</strong>地移向弯内侧，让板刃自然咬进雪。注意是整体平移，不是上半身单独侧倾。</li><li><strong>纵向变化（Fore／Aft）</strong>：沿板纵轴的前倾或后靠，控制板头／板尾的负荷分配，影响入弯与速度。</li><li><strong>垂直向变化（Up／Down）</strong>：屈膝降低重心（蓄压）、伸膝升高（释放），与&quot;压力管理&quot;强耦合。</li><li><strong>常见误解</strong>：</li><li>误区一：重心越低越好 → 过度下蹲反而把关节锁死、妨碍换刃；目的在<strong>稳定 + 指向刃</strong>。</li><li>误区二：靠上半身&quot;压&quot; → 重心转移应走踝-膝-髋-肩整条链，上身单独歪会失去直线。</li><li><strong>自检</strong>：正面或侧面回看，头-肩-髋-膝-踝是否成一条整体倾斜的直线（而不是&quot;折角&quot;）。</li><li><strong>教学 cue</strong>：「重心交给弯的那只脚」「把重心送向弯内」「全身一起往下弯里滑」。</li></ul><div class="spacer"></div><ul><li><strong>图文示例｜刻滑动作里的弯内倾倒与重心下压</strong>：</li></ul><figure class="media">
+  <span class="media-frame">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Snowboarder_carving_at_Wachusett.gk.jpg" alt="刻滑时压低重心、整体向弯内倾倒的瞬间" loading="lazy" decoding="async" onerror="this.remove();this.parentNode.classList.add('off')"/>
+  </span>
+  <figcaption>刻滑时压低重心、整体向弯内倾倒的瞬间</figcaption>
+  <a class="media-src" href="https://upload.wikimedia.org/wikipedia/commons/c/c9/Snowboarder_carving_at_Wachusett.gk.jpg" target="_blank" rel="noopener noreferrer">查看图片来源 ↗</a>
+</figure><div class="spacer"></div><p>    图片来源：Wikimedia Commons（自由授权）· <a class="md-link" href="https://commons.wikimedia.org/wiki/File:Snowboarder_carving_at_Wachusett.gk.jpg">查看原图</a></p><p>    扩展阅读：<a class="md-link" href="https://skiwawa.com/basic-mechanics-of-skiing/ &amp;quot;板与重心、压力的关系&amp;quot;">滑雪基本原理：重心与压力（skiwawa）</a></p><div class="spacer"></div><hr/><div class="spacer"></div><h3 id="2">2. 压力管理</h3><div class="spacer"></div><ul><li><strong>定义</strong>：在换刃、入弯、弯底、出弯各阶段，对施加给板面的垂直负载强度（加压/减压）的<strong>节奏与时机</strong>控制。</li><li><strong>&quot;压力循环&quot;四段（像海浪起伏，不是一顿一停）</strong>：</li></ul><ol><li><strong>入弯·轻（软刃）</strong>：压力最小，便于转向</li><li><strong>弯顶·压（抓地）</strong>：屈膝下压、把刃咬进雪，产生转弯的横向力</li><li><strong>出弯·扬（回弹）</strong>：伸膝让板回弹、压力下降</li><li><strong>换刃·失重（毫秒窗口）</strong>：利好时机，板一瞬间&quot;浮起&quot;，完成换刃</li></ol><ul><li><strong>教学表达 cue</strong>：「弯顶给一脚（加压）」「出弯站起来（减压 / 弹起）」。</li><li><strong>考试链</strong>：加压早晚决定弯型——<strong>早压</strong>＝长弧稳、符合教学；<strong>越靠近弯底压</strong>＝短弧直、刻滑速度高（韩式/JSBA 快速刻滑的节奏差异来源）。</li></ul><div class="spacer"></div><ul><li><strong>图文示例｜压力到位后的效果（看刃线）</strong>：</li></ul><figure class="media">
+  <span class="media-frame">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Turn_in_powder.jpg" alt="转弯时把压力加在立起的刃上，留下细而长的线" loading="lazy" decoding="async" onerror="this.remove();this.parentNode.classList.add('off')"/>
+  </span>
+  <figcaption>转弯时把压力加在立起的刃上，留下细而长的线</figcaption>
+  <a class="media-src" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/Turn_in_powder.jpg" target="_blank" rel="noopener noreferrer">查看图片来源 ↗</a>
+</figure><div class="spacer"></div><p>    图片来源：Wikimedia Commons（自由授权）· <a class="md-link" href="https://commons.wikimedia.org/wiki/File:Turn_in_powder.jpg">查看原图</a></p><ul><li>延伸参考：<a class="md-link" href="https://zhuanlan.zhihu.com/p/479284233">滑雪压力管理：森林切割与摩擦的区别（知乎专栏）</a></li></ul><div class="spacer"></div><hr/><div class="spacer"></div><h3 id="3">3. 刃的使用</h3><div class="spacer"></div><ul><li><strong>定义</strong>：控制板刃与雪面的<strong>接触深度、受刃角（刃角）、用刃时机</strong>，是&quot;刻滑 vs 搓雪&quot;（carving vs skidding）的分水岭。</li><li><strong>子模型</strong>：</li><li><strong>受刃角（Edge Angle）</strong>：刃平面与雪面夹角，越大型弧越深、弯越小。主要来自脚踝（压前刃→倒脚跟）→膝→髋的链条。</li><li><strong>刃换（Edge Change）</strong>：前刃/后刃之间无停顿过渡——顺序是&quot;先减压→反刃→再加压&quot;。</li><li><strong>刃痕（Edging / Tracking）</strong>：自己在雪上留下的是&quot;细长的一根线（carving）&quot;还是&quot;一片铺开的面（skidding）&quot;，是一眼可判的核心指标。</li><li><strong>自检</strong>：滑完一弯回头看一眼——遇到的是线还是面？把一个&quot;面&quot;收成&quot;线&quot;，就是刻滑进步的主线。</li><li><strong>教学 cue</strong>：「切开雪，不是拖过去」「压下刃肩、让它咬住」。</li></ul><div class="spacer"></div><ul><li><strong>图文示例｜专用刻划板与&quot;立刃深度&quot;</strong>：</li></ul><figure class="media">
+  <span class="media-frame">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Alpine_boards.jpg" alt="竞速/高山单板：窄长板身，深刃但刻划更强" loading="lazy" decoding="async" onerror="this.remove();this.parentNode.classList.add('off')"/>
+  </span>
+  <figcaption>竞速/高山单板：窄长板身，深刃但刻划更强</figcaption>
+  <a class="media-src" href="https://upload.wikimedia.org/wikipedia/commons/7/72/Alpine_boards.jpg" target="_blank" rel="noopener noreferrer">查看图片来源 ↗</a>
+</figure><div class="spacer"></div><p>    图片来源：Wikimedia Commons（自由授权）· <a class="md-link" href="https://commons.wikimedia.org/wiki/File:Alpine_boards.jpg">查看原图</a></p><p>    进阶参考：<a class="md-link" href="http://alpinesnowboarder.com/wp-content/uploads/2018/03/Physics-of-a-Snowboard-Carving-Turn.pdf">刻滑转弯物理（AlpineSnowboarder 图解）</a></p><div class="spacer"></div><hr/><div class="spacer"></div><h3 id="4">4. 旋转机制</h3><div class="spacer"></div><ul><li><strong>定义</strong>：让板头转向的<strong>身体旋转来源</strong>，回答&quot;是你主动带着板转，还是板拖着你转&quot;。</li><li><strong>子模型</strong>：</li><li><strong>下肢旋转</strong>：以膝为轴、用小腿/大腿带板前端转向，入门最常见。</li><li><strong>髋（骨盆）旋转</strong>：由髋带动整板，中速/大弧最顺。</li><li><strong>上体反扭（counter）</strong>：上身朝向与板保持相对角，用于高速时的稳定与保线。</li><li><strong>协同使用（mono vs counter）</strong>：同向转动（momo）适合长弧，反向/反扭适合小弯，取决于想做&quot;C弯&quot;还是&quot;甩尾快弯&quot;。</li><li><strong>教学 cue</strong>：「用脚踝开始转，不要扭腰」「上身稳住，让下体自由转」「想让板快速转，就先释放再转，而不是硬拧」。</li></ul><div class="spacer"></div><h3 id="sec-7">图文示例｜主动转换与身体带动：</h3><figure class="media">
+  <span class="media-frame">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/BoarderX.JPG" alt="转弯时由腿与骨盆共同带动的运动瞬间" loading="lazy" decoding="async" onerror="this.remove();this.parentNode.classList.add('off')"/>
+  </span>
+  <figcaption>转弯时由腿与骨盆共同带动的运动瞬间</figcaption>
+  <a class="media-src" href="https://upload.wikimedia.org/wikipedia/commons/0/0a/BoarderX.JPG" target="_blank" rel="noopener noreferrer">查看图片来源 ↗</a>
+</figure><div class="spacer"></div><p>    图片来源：Wikimedia Commons（自由授权）· <a class="md-link" href="https://commons.wikimedia.org/wiki/File:BoarderX.JPG">查看原图</a></p><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-8">动作链（Common Action Chain）</h2><div class="spacer"></div><p>把四条主轴在时间上连成一条<strong>可教的统一序列</strong>，成为教学与自查的固定顺序：</p><div class="spacer"></div><pre><code>ALIGN（对齐/重心） → ANGLE（立刃/倾压） → PRESS（加压/持久） → ROTATE（旋转/扭转） → RELEASE（释放/换刃）→（返 ALIGN）</code></pre><div class="spacer"></div><div class="mermaid-wrap"><pre class="mermaid">flowchart LR
+  A[ALIGN 对齐/重心] --&gt; B[ANGLE 立刃] --&gt; C[PRESS 加压] --&gt; D[ROTATE 旋转]
+  D --&gt; E[RELEASE 释压/换刃] --&gt; A</pre></div><div class="spacer"></div><p>闭合：RELEASE 的&quot;失重换刃&quot;正好又是下一弯 ALIGN 的开始。所谓&quot;流畅&quot;，就是<strong>这一链的每一环节都连续、无停顿、无叠加</strong>，而非五步一顿。</p><div class="spacer"></div><p><strong>本模型的体系分工</strong>：每个体系强调的焦点不同：</p><div class="spacer"></div><table><thead><tr><th>体系</th><th>强调的一环</th></tr></thead><tbody><tr><td>韩式刻滑</td><td>PRESS（持久压刃）＋ ROTATE（带动板）</td></tr><tr><td>JSBA</td><td>ALIGN（对齐）＋ 基础姿态先行</td></tr><tr><td>奥地利 APSI</td><td>ROTATE ＋ Control（主动旋转 + 长弧稳定）</td></tr><tr><td>美/加</td><td>整体连贯，最重时机</td></tr></tbody></table><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-9">规格与分维</h2><div class="spacer"></div><p>本层是纯模型层，不含具体数字标准（如等级、部位角度等）。与具体考核有关的数值见：<a class="wikilink" href="../01-systems/overview.html">体系看全</a>。</p><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-10">相关</h2><div class="spacer"></div><ul><li>术语定义：<span class="badge">glossary.md</span></li><li>进阶路径：<span class="badge">progression-map.md</span></li><li>重心主轴 → <a class="wikilink" href="../02-korean-carving/compression-extension.html">韩式团身/压缩伸展</a></li></ul>
+      <footer class="pager">
+        <span class="pager-note">地基层 · 术语/概念/进阶图 · 共享概念层（核心动作模型）</span>
+      </footer>
+    </article>
+  </main>
+</div>
+<button id="topBtn" class="top-btn" title="返回顶部" aria-label="返回顶部" hidden>↑</button>
+<script src="../assets/app.js"></script>
+</body>
+</html>

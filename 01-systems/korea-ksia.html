@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>韩式体系详解（KSIA 与韩式刻滑） · 单板滑雪教练知识库</title>
+<meta name="description" content="体系 韩国 韩式刻滑 详解"/>
+<link rel="stylesheet" href="../assets/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+<div class="app">
+  <nav id="toc" aria-label="站点导航"><div class="toc-inner"><div class="toc-page"><div class="toc-page-title">本文目录</div><a class="toc-anchor" href="#sec-2">① 体系定位</a><a class="toc-anchor" href="#sec-3">② 技术特点</a><a class="toc-anchor toc-h3" href="#sec-4">关键术语（源自 glossary）</a><a class="toc-anchor" href="#sec-5">③ 教学逻辑</a><a class="toc-anchor" href="#sec-6">④ 滑行风格</a><a class="toc-anchor" href="#sec-7">⑤ 考核标准</a><a class="toc-anchor" href="#sec-8">⑥ 适用人群</a><a class="toc-anchor" href="#sec-9">与专项、原理的衔接</a></div><details><summary>🏠 首页</summary><a class="toc-link" href="../index.html">知识库首页</a></details><details><summary>地基层 · 术语/概念/进阶图</summary><a class="toc-link" href="../00-foundation/core-models.html">共享概念层（核心动作模型）</a><a class="toc-link" href="../00-foundation/glossary.html">术语词典（中英日对照）</a><a class="toc-link" href="../00-foundation/progression-map.html">跨模块进阶路径图</a></details><details open><summary>体系层 · 全球教学体系</summary><a class="toc-link" href="../01-systems/asia.html">亚洲教学体系概览（日/韩/中）</a><a class="toc-link" href="../01-systems/austria-apsi.html">奥地利体系详解（阿尔卑斯高山传统）</a><a class="toc-link" href="../01-systems/canada-casi.html">加拿大体系详解（CASI 单板）</a><a class="toc-link" href="../01-systems/comparison.html">各体系等级对照与定位</a><a class="toc-link" href="../01-systems/europe.html">欧洲教学体系概览（奥/法/意/德/瑞/英/北欧）</a><a class="toc-link" href="../01-systems/japan-jsba.html">日本体系详解（JSBA / JSAA）</a><a class="toc-link active" href="../01-systems/korea-ksia.html">韩式体系详解（KSIA 与韩式刻滑）</a><a class="toc-link" href="../01-systems/north-america.html">北美教学体系概览（美国 / 加拿大）</a><a class="toc-link" href="../01-systems/overview.html">全球滑雪教学体系全景导论</a><a class="toc-link" href="../01-systems/usa-aasi.html">美国体系详解（AASI 单板）</a></details><details><summary>韩式刻滑</summary><a class="toc-link" href="../02-korean-carving/compression-extension.html">韩式刻滑·团身与压缩伸展</a><a class="toc-link" href="../02-korean-carving/edge-pressure.html">韩式刻滑·刃角控制与压力管理</a><a class="toc-link" href="../02-korean-carving/posture-drive.html">韩式刻滑·基本姿态与发力方式</a></details><details><summary>JSBA 体系</summary><a class="toc-link" href="../03-jsba-system/carving-relationship.html">JSBA 与韩式刻滑的关系（含搓雪 vs 刻滑 对照）</a><a class="toc-link" href="../03-jsba-system/core-concepts.html">JSBA 体系·核心概念</a><a class="toc-link" href="../03-jsba-system/level-framework.html">JSBA 动作模式与教学进阶</a></details><details><summary>公园自由式</summary><a class="toc-link" href="../04-freestyle-park/box-rail-path.html">Box / Rail 路径·入门到进阶</a><a class="toc-link" href="../04-freestyle-park/freestyle-basics.html">公园自由式·基本功</a><a class="toc-link" href="../04-freestyle-park/jump-path.html">跳台路径·从入门到进阶</a><a class="toc-link" href="../04-freestyle-park/safety.html">公园自由式·安全与责任</a></details><details><summary>初学者教学法</summary><a class="toc-link" href="../05-teaching/error-correction.html">常见错误与纠正</a><a class="toc-link" href="../05-teaching/learning-sequence.html">初学者·学习顺序</a><a class="toc-link" href="../05-teaching/teaching-points.html">05·教学要点</a></details><details><summary>补充科目</summary><a class="toc-link" href="../06-specialties/specialties-overview.html">补充科目（概述）</a></details><details><summary>教练工具箱</summary><a class="toc-link" href="../07-toolbox/cue-cards.html">Cue 卡（教练课堂口令）</a><a class="toc-link" href="../07-toolbox/lesson-plan-template.html">教案模板</a><a class="toc-link" href="../07-toolbox/progression-checklist.html">进阶检查表</a><a class="toc-link" href="../07-toolbox/resources.html">参考资料与学习路线（教练备考）</a></details><details><summary>原理收束</summary><a class="toc-link" href="../08-core-principles/principles.html">底层原理收束章（共通滑雪框架）</a></details></div></nav>
+  <main class="content">
+    <div class="toolbar">
+      <button id="menuToggle" class="icon-btn" title="展开目录" aria-label="展开目录">☰</button>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="搜索术语 / 主题…（按 / 快捷聚焦）" autocomplete="off"/>
+        <kbd class="search-kbd">/</kbd>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+    </div>
+    <div id="searchResults" class="search-results" hidden></div>
+    <article class="article">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="../assets/index.html">知识库</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">体系层 · 全球教学体系</span>
+      </nav>
+      <header class="article-header">
+        <h1>韩式体系详解（KSIA 与韩式刻滑）</h1>
+        <div class="tagline"><span class="tag">体系</span><span class="tag">韩国</span><span class="tag">韩式刻滑</span><span class="tag">详解</span></div>
+      </header>
+      <h1 id="sec-1">韩式体系详解（韩式刻滑）</h1><div class="spacer"></div><blockquote>六要素统一结构：①体系定位 ②技术特点 ③教学逻辑 ④滑行风格 ⑤考核标准 ⑥适用人群 「韩式刻滑」更多是民间/技术流派，非官方单一认证；官方机构以 KSIA 及区域协会为准。 </blockquote><div class="spacer"></div><div class="spacer"></div><h2 id="sec-2">① 体系定位</h2><div class="spacer"></div><ul><li><strong>国家</strong>：韩国。</li><li><strong>机构</strong>：<strong>KSIA（Korea Ski Instructor Association，韩国滑雪指导员联盟，单板并入其中）</strong>，以及众多针对刻滑的<strong>商业学院</strong>。</li><li><strong>认可范围</strong>：韩国本土及韩流影响下的亚洲市场（中国、东南亚滑雪热潮）。</li><li><strong>权威</strong>：韩国国家教练培训体系；但「韩式刻滑」多为<strong>民间技术流派称谓</strong>。</li></ul><div class="spacer"></div><p><strong>一句话</strong>：「韩式刻滑」＝以<strong>低姿、持久压刃、深弯小弧</strong>为特征的韩国流行刻滑风格，因线上教学与社群成为「刻滑」最流行的代名词；想考证仍需对接 KSIA 等官方渠道。</p><div class="spacer"></div><h2 id="sec-3">② 技术特点</h2><div class="spacer"></div><ul><li><strong>受刃/刻滑优先</strong>：追求沿刃、细弧；把「下山板横移/拖板」减到最少。</li><li><strong>持久压刃（Press &amp; Hold）</strong>：换刃后把重心压稳在刃上、维持较长时间压力，是韩式区别于「即转」的手法。</li><li><strong>团身深弯</strong>：高弯速下大幅屈曲、重心向内偏，形成深、贴的压弯（对应 <a class="wikilink" href="../02-korean-carving/compression-extension.html">团身=压缩展开</a>）。</li><li><strong>刃角/倾角</strong>：受刃的深入度为主，倾角与弯弧半径是核心变量。</li></ul><div class="spacer"></div><h3 id="sec-4">关键术语（源自 glossary）</h3><div class="spacer"></div><ul><li>前刃/后刃、受刃、刃角、压力、持久压刃 — 见 <a class="wikilink" href="../00-foundation/glossary.html">术语词典</a></li></ul><div class="spacer"></div><h2 id="sec-5">③ 教学逻辑</h2><div class="spacer"></div><ul><li><strong>从「会滑 → 会刻」</strong>：先把陡坡减速与基础转弯打稳，再进入刻滑专项，用「压刃-释放」循环训练。</li><li><strong>强调「下肢+重心先于上身」</strong>：先用折叠与身体位置做压力，不做快速扭腰。</li><li><strong>商业学院常以「好看的弧线/线美」为导向</strong>：视频示范、同伴互评普遍（视觉反馈驱动）。</li></ul><div class="spacer"></div><blockquote><strong>与官方体系的关系</strong>：韩式刻滑在官方 KSIA 里仍是「基础并行」的前置——即先稳换刃、再讲究刻线；线上「韩式刻滑」流派本质是<strong>放大了</strong>「持压 + 深弯 + 高立刃」这几个环节，而非另立新力学。 </blockquote><div class="spacer"></div><div class="spacer"></div><h2 id="sec-6">④ 滑行风格</h2><div class="spacer"></div><ul><li><strong>外观</strong>：姿态低、上半身相对稳定、弧线细腻而长；压弯时团身折叠。</li><li><strong>弯形</strong>：细刻痕（切进雪）、持续压，进出弯时机讲究。</li><li><strong>多用于平整雪/缓至中陡坡</strong>，追求「线+刃」的美感与手感。</li></ul><div class="spacer"></div><h2 id="sec-7">⑤ 考核标准</h2><div class="spacer"></div><ul><li><strong>等级</strong>：多为 1 级（入门教练）→ 高等级逐级；商业学院另有独立认证。</li><li><strong>项目</strong>：滑行技术（刻滑技巧）、教学展示（讲解+示范）、安全规范。</li><li><strong>对目标读者</strong>：韩式向相对好上手、也易展示，适合「高校滑雪队→教练」。</li></ul><div class="spacer"></div><h2 id="sec-8">⑥ 适用人群</h2><div class="spacer"></div><ul><li>想追求<strong>刻滑手感、深弯美感</strong>的滑者/教练。</li><li>已有转弯基础，想快速建立「有画面感的刻滑动作」。</li><li>若从事<strong>竞技竞速</strong>，韩式刻滑偏表演/美观、非竞速 → 需另补 <a class="wikilink" href="../01-systems/canada-casi.html">加拿大</a>／<a class="wikilink" href="../01-systems/europe.html">欧式竞速</a>。</li></ul><div class="spacer"></div><hr/><div class="spacer"></div><h2 id="sec-9">与专项、原理的衔接</h2><div class="spacer"></div><ul><li>专项深化：<a class="wikilink" href="../02-korean-carving/posture-drive.html">韩式姿势与发力</a></li><li>刃压力：<a class="wikilink" href="../02-korean-carving/edge-pressure.html">刃压力</a></li><li>团身压缩：<a class="wikilink" href="../02-korean-carving/compression-extension.html">团身压缩伸展</a></li><li>底层原理：极侧重「压力管理（PRESS）」「刃的使用」，见 <a class="wikilink" href="../08-core-principles/principles.html">原理章</a></li></ul>
+      <footer class="pager">
+        <span class="pager-note">体系层 · 全球教学体系 · 韩式体系详解（KSIA 与韩式刻滑）</span>
+      </footer>
+    </article>
+  </main>
+</div>
+<button id="topBtn" class="top-btn" title="返回顶部" aria-label="返回顶部" hidden>↑</button>
+<script src="../assets/app.js"></script>
+</body>
+</html>
