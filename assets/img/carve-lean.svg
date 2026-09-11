@@ -1,60 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="PingFang SC, Microsoft YaHei, -apple-system, sans-serif">
-  <!-- 刻滑重心：后仰 vs 前压（侧面线稿） -->
-  <g>
-    <!-- 顶部分区标识 -->
-    <text x="250" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#dc2626">✗ 错误 · 后仰</text>
-    <text x="750" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#16a34a">✓ 正确 · 前压</text>
-    <line x1="500" y1="20" x2="500" y2="400" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,6"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E6F2FF"/><stop offset="1" stop-color="#FBFDFF"/>
+    </linearGradient>
+    <marker id="aR" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#EF4444"/>
+    </marker>
+    <marker id="aG" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#22C55E"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="440" fill="url(#sky)"/>
+  <path d="M0,400 Q250,382 500,394 T1000,384 V440 H0 Z" fill="#FFFFFF" stroke="#D8DEE8" stroke-width="2"/>
+  <line x1="500" y1="16" x2="500" y2="398" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="8,6"/>
 
-    <!-- 雪坡地面线（左右各一段） -->
-    <path d="M 60 350 L 470 320" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
-    <path d="M 540 358 L 940 336" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(110,12)"><rect width="250" height="44" rx="22" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/><path d="M36,15 L48,27 M48,15 L36,27" stroke="#EF4444" stroke-width="4.5" stroke-linecap="round"/><text x="150" y="30" text-anchor="middle" font-size="21" font-weight="700" fill="#B91C1C">错误 · 重心后坐</text></g>
+  <g transform="translate(640,12)"><rect width="250" height="44" rx="22" fill="#DCFCE7" stroke="#22C55E" stroke-width="2"/><polyline points="32,22 39,30 54,14" fill="none" stroke="#22C55E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="30" text-anchor="middle" font-size="21" font-weight="700" fill="#15803D">正确 · 重心前压</text></g>
 
-    <!-- 左：错误·后仰 —— 上身挺直/后仰，重心落到脚后，臀部后撅 -->
-    <g stroke="#1f2937" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <!-- 前腿(右) 从髋到膝到踝 -->
-      <path d="M 290 210 L 292 262 L 268 322"/>   <!-- 后腿屈 -->
-      <path d="M 290 210 L 260 258 L 232 316"/>   <!-- 前腿屈 -->
-      <!-- 躯干后仰 -->
-      <path d="M 292 168 L 300 214"/>
-      <!-- 手臂略打开平衡 -->
-      <path d="M 296 196 L 330 224"/>
-      <!-- 头 -->
-      <circle cx="304" cy="134" r="34" stroke-width="6"/>
-    </g>
-    <!-- 错误标记：大 "✗" 画在身前 -->
-    <g stroke="#dc2626" stroke-width="8" stroke-linecap="round">
-      <line x1="330" y1="150" x2="376" y2="196"/>
-      <line x1="376" y1="150" x2="330" y2="196"/>
-    </g>
-    <!-- 重力箭头：前倾会让重心拉到板后 -->
-    <g stroke="#dc2626" stroke-width="5" stroke-linecap="round">
-      <line x1="300" y1="120" x2="286" y2="196"/><polygon points="286,206 294,190 278,190" fill="#dc2626"/>
-    </g>
-    <text x="216" y="80" text-anchor="middle" font-size="17" fill="#dc2626">后仰 → 刃压跟不上，板尾甩开</text>
-
-    <!-- 右：正确·前压（屈髋下压，重心落在刃上方） -->
-    <g stroke="#1f2937" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <!-- 板 -->
-      <line x1="520" y1="360" x2="720" y2="336" stroke="#334155" stroke-width="9"/>
-      <!-- 前腿 -->
-      <path d="M 640 350 Q 646 300 612 272"/>
-      <!-- 后腿 -->
-      <path d="M 586 344 Q 632 296 664 270"/>
-      <!-- 躯干前倾 -->
-      <path d="M 638 268 L 700 238"/>
-      <!-- 髋部前压，手臂指向板头 -->
-      <path d="M 650 250 L 690 220"/>
-      <!-- 头 -->
-      <circle cx="688" cy="204" r="22" stroke-width="6"/>
-    </g>
-    <!-- 正确标记：绿 "✓" -->
-    <g stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="700,180 712,196 734,166"/>
-    </g>
-    <g stroke="#16a34a" stroke-width="5" stroke-linecap="round">
-      <line x1="640" y1="120" x2="650" y2="180"/><polygon points="642,112 634,164 668,164" fill="none" stroke-width="5"/>
-    </g>
-    <text x="640" y="80" text-anchor="middle" font-size="17" fill="#16a34a">身体前压、重心落刃上 → 刃咬得深</text>
+  <path d="M170,378 Q280,366 390,354" fill="none" stroke="#1E293B" stroke-width="15" stroke-linecap="round"/>
+  <path d="M170,378 Q280,366 390,354" fill="none" stroke="#64748B" stroke-width="9" stroke-linecap="round"/>
+  <path d="M170,378 Q280,366 390,354" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/>
+  <g transform="rotate(-6 215 368)"><rect x="201" y="357" width="28" height="19" rx="5" fill="#334155" stroke="#1E293B" stroke-width="3"/><rect x="205" y="360" width="20" height="8" rx="2" fill="#94A3B8"/></g>
+  <g transform="rotate(-6 335 354)"><rect x="321" y="343" width="28" height="19" rx="5" fill="#334155" stroke="#1E293B" stroke-width="3"/><rect x="325" y="346" width="20" height="8" rx="2" fill="#94A3B8"/></g>
+  <path d="M215,360 L218,300 L228,262" fill="none" stroke="#1E293B" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M215,360 L218,300 L228,262" fill="none" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M335,348 L300,292 L252,258" fill="none" stroke="#1E293B" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M335,348 L300,292 L252,258" fill="none" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,258 L196,178 L162,190 L206,272 Z" fill="#F59E0B" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M186,206 L206,214" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M186,190 L140,214 L104,222" fill="none" stroke="#1E293B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M186,190 L140,214 L104,222" fill="none" stroke="#F59E0B" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="104" cy="222" r="9" fill="#334155" stroke="#1E293B" stroke-width="3"/>
+  <g transform="translate(168,158) rotate(34)">
+    <circle r="22" fill="#F59E0B" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-22,-6 Q0,-17 22,-6" fill="none" stroke="#1E293B" stroke-width="3"/>
+    <rect x="-17" y="-4" width="34" height="14" rx="6" fill="#1E293B"/>
+    <rect x="-13" y="-1" width="26" height="9" rx="4" fill="#38BDF8"/>
   </g>
+  <path d="M186,170 L192,142" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+  <path d="M150,140 Q150,152 150,164" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="7,5"/>
+  <line x1="150" y1="150" x2="150" y2="402" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="7,5" marker-end="url(#aR)"/>
+  <circle cx="150" cy="150" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M120,120 L150,150 L180,120" fill="none" stroke="#EF4444" stroke-width="3"/>
+  <text x="252" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#B91C1C">重心落在板尾之外，板头飘、刃吃不住</text>
+
+  <path d="M640,384 Q760,364 880,340" fill="none" stroke="#1E293B" stroke-width="15" stroke-linecap="round"/>
+  <path d="M640,384 Q760,364 880,340" fill="none" stroke="#64748B" stroke-width="9" stroke-linecap="round"/>
+  <path d="M640,384 Q760,364 880,340" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/>
+  <g transform="rotate(-12 700 374)"><rect x="686" y="363" width="28" height="19" rx="5" fill="#334155" stroke="#1E293B" stroke-width="3"/><rect x="690" y="366" width="20" height="8" rx="2" fill="#94A3B8"/></g>
+  <g transform="rotate(-12 830 350)"><rect x="816" y="339" width="28" height="19" rx="5" fill="#334155" stroke="#1E293B" stroke-width="3"/><rect x="820" y="342" width="20" height="8" rx="2" fill="#94A3B8"/></g>
+  <path d="M700,366 L712,308 L768,266" fill="none" stroke="#1E293B" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700,366 L712,308 L768,266" fill="none" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M830,346 L812,296 L788,262" fill="none" stroke="#1E293B" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M830,346 L812,296 L788,262" fill="none" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M786,266 L824,190 L790,178 L754,254 Z" fill="#F59E0B" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M790,208 L812,214" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M806,196 L858,224 L894,236" fill="none" stroke="#1E293B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M806,196 L858,224 L894,236" fill="none" stroke="#F59E0B" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="894" cy="236" r="9" fill="#334155" stroke="#1E293B" stroke-width="3"/>
+  <path d="M800,192 L742,222 L706,232" fill="none" stroke="#1E293B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M800,192 L742,222 L706,232" fill="none" stroke="#F59E0B" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="706" cy="232" r="9" fill="#334155" stroke="#1E293B" stroke-width="3"/>
+  <g transform="translate(824,158) rotate(-14)">
+    <circle r="22" fill="#F59E0B" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-22,-6 Q0,-17 22,-6" fill="none" stroke="#1E293B" stroke-width="3"/>
+    <rect x="-17" y="-4" width="34" height="14" rx="6" fill="#1E293B"/>
+    <rect x="-13" y="-1" width="26" height="9" rx="4" fill="#38BDF8"/>
+  </g>
+  <path d="M806,168 L824,140" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+  <path d="M788,140 Q788,152 788,164" fill="none" stroke="#22C55E" stroke-width="3" stroke-dasharray="7,5"/>
+  <line x1="788" y1="150" x2="788" y2="404" stroke="#22C55E" stroke-width="2.5" stroke-dasharray="7,5" marker-end="url(#aG)"/>
+  <circle cx="788" cy="150" r="6.5" fill="#22C55E" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M758,120 L788,150 L818,120" fill="none" stroke="#22C55E" stroke-width="3"/>
+  <path d="M632,410 Q760,438 902,412" fill="none" stroke="#60A5FA" stroke-width="3.5" stroke-dasharray="9,6"/>
+  <text x="760" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#15803D">重心压在板中，膝盖吃住、刃稳稳咬雪</text>
 </svg>
