@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="PingFang SC, Microsoft YaHei, -apple-system, sans-serif">
+  <!-- 刻滑重心：后仰 vs 前压（侧面线稿） -->
+  <g>
+    <!-- 顶部分区标识 -->
+    <text x="250" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#dc2626">✗ 错误 · 后仰</text>
+    <text x="750" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#16a34a">✓ 正确 · 前压</text>
+    <line x1="500" y1="20" x2="500" y2="400" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,6"/>
+
+    <!-- 雪坡地面线（左右各一段） -->
+    <path d="M 60 350 L 470 320" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 540 358 L 940 336" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- 左：错误·后仰 —— 上身挺直/后仰，重心落到脚后，臀部后撅 -->
+    <g stroke="#1f2937" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- 前腿(右) 从髋到膝到踝 -->
+      <path d="M 290 210 L 292 262 L 268 322"/>   <!-- 后腿屈 -->
+      <path d="M 290 210 L 260 258 L 232 316"/>   <!-- 前腿屈 -->
+      <!-- 躯干后仰 -->
+      <path d="M 292 168 L 300 214"/>
+      <!-- 手臂略打开平衡 -->
+      <path d="M 296 196 L 330 224"/>
+      <!-- 头 -->
+      <circle cx="304" cy="134" r="34" stroke-width="6"/>
+    </g>
+    <!-- 错误标记：大 "✗" 画在身前 -->
+    <g stroke="#dc2626" stroke-width="8" stroke-linecap="round">
+      <line x1="330" y1="150" x2="376" y2="196"/>
+      <line x1="376" y1="150" x2="330" y2="196"/>
+    </g>
+    <!-- 重力箭头：前倾会让重心拉到板后 -->
+    <g stroke="#dc2626" stroke-width="5" stroke-linecap="round">
+      <line x1="300" y1="120" x2="286" y2="196"/><polygon points="286,206 294,190 278,190" fill="#dc2626"/>
+    </g>
+    <text x="216" y="80" text-anchor="middle" font-size="17" fill="#dc2626">后仰 → 刃压跟不上，板尾甩开</text>
+
+    <!-- 右：正确·前压（屈髋下压，重心落在刃上方） -->
+    <g stroke="#1f2937" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- 板 -->
+      <line x1="520" y1="360" x2="720" y2="336" stroke="#334155" stroke-width="9"/>
+      <!-- 前腿 -->
+      <path d="M 640 350 Q 646 300 612 272"/>
+      <!-- 后腿 -->
+      <path d="M 586 344 Q 632 296 664 270"/>
+      <!-- 躯干前倾 -->
+      <path d="M 638 268 L 700 238"/>
+      <!-- 髋部前压，手臂指向板头 -->
+      <path d="M 650 250 L 690 220"/>
+      <!-- 头 -->
+      <circle cx="688" cy="204" r="22" stroke-width="6"/>
+    </g>
+    <!-- 正确标记：绿 "✓" -->
+    <g stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="700,180 712,196 734,166"/>
+    </g>
+    <g stroke="#16a34a" stroke-width="5" stroke-linecap="round">
+      <line x1="640" y1="120" x2="650" y2="180"/><polygon points="642,112 634,164 668,164" fill="none" stroke-width="5"/>
+    </g>
+    <text x="640" y="80" text-anchor="middle" font-size="17" fill="#16a34a">身体前压、重心落刃上 → 刃咬得深</text>
+  </g>
+</svg>

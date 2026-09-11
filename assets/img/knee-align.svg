@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="PingFang SC, Microsoft YaHei, -apple-system, sans-serif">
+  <!-- 膝盖：内扣 vs 对准前方（俯视双膝示意） -->
+  <g>
+    <text x="250" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#dc2626">✗ 错误 · 膝盖内扣</text>
+    <text x="750" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#16a34a">✓ 正确 · 膝盖对准</text>
+    <line x1="500" y1="20" x2="500" y2="400" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,6"/>
+
+    <!-- 左图：X 形 —— 双膝内夹，朝向彼此 -->
+    <g>
+      <!-- 双脚(前) -->
+      <circle cx="150" cy="150" r="26" fill="#cbd5e1" stroke="#334155" stroke-width="5"/>
+      <circle cx="350" cy="150" r="26" fill="#cbd5e1" stroke="#334155" stroke-width="5"/>
+      <!-- 大腿(俯视) 从脚到髋(斜向中间) -->
+      <g stroke="#334155" stroke-width="8" stroke-linecap="round">
+        <line x1="150" y1="150" x2="245" y2="250"/>
+        <line x1="350" y1="150" x2="255" y2="250"/>
+      </g>
+      <!-- 膝盖交汇(内扣点) -->
+      <circle cx="250" cy="252" r="16" fill="#fee2e2" stroke="#dc2626" stroke-width="6"/>
+      <!-- 标注内夹箭头 -->
+      <g stroke="#dc2626" stroke-width="5" stroke-linecap="round">
+        <line x1="92" y1="250" x2="150" y2="270"/><polygon points="150,282 158,262 142,262" fill="#dc2626"/>
+        <line x1="408" y1="250" x2="350" y2="270"/><polygon points="350,282 358,262 342,262" fill="#dc2626"/>
+      </g>
+      <text x="250" y="340" text-anchor="middle" font-size="17" fill="#dc2626">膝盖相抵 → 刃压分散、内侧受力扭曲</text>
+    </g>
+
+    <!-- 右图：平行 —— 膝对齐波 / 朝板头 -->
+    <g>
+      <!-- 双脚 -->
+      <circle cx="650" cy="150" r="26" fill="#dcfce7" stroke="#15803d" stroke-width="5"/>
+      <circle cx="850" cy="150" r="26" fill="#dcfce7" stroke="#15803d" stroke-width="5"/>
+      <!-- 大腿平行 -->
+      <g stroke="#15803d" stroke-width="8" stroke-linecap="round">
+        <line x1="650" y1="150" x2="642" y2="252"/>
+        <line x1="850" y1="150" x2="858" y2="252"/>
+      </g>
+      <circle cx="650" cy="252" r="22" fill="#dcfce7"/>
+      <circle cx="850" cy="252" r="22" fill="#dcfce7"/>
+      <!-- 对准箭头(向下前方) -->
+      <g stroke="#16a34a" stroke-width="5" stroke-linecap="round">
+        <line x1="642" y1="252" x2="630" y2="300"/><polygon points="624,310 630,296 648,304" fill="#16a34a"/>
+        <line x1="858" y1="252" x2="870" y2="300"/><polygon points="876,310 870,296 852,304" fill="#16a34a"/>
+      </g>
+      <text x="750" y="340" text-anchor="middle" font-size="17" fill="#16a34a">膝盖朝板前进方向 → 立刃更稳</text>
+    </g>
+  </g>
+</svg>

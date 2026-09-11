@@ -65,31 +65,49 @@
     });
   }
 
-  /* ---------- 阅读进度条 + 返回顶部 + 章节高亮 ---------- */
+  /* ---------- 阅读进度条 + 返回顶部 + 章节高亮 + 顶部位置指示 ---------- */
   var pbar = document.getElementById('progressBar');
   var topBtn = document.getElementById('topBtn');
+  var posInd = document.getElementById('posIndicator');
+  var posText = document.getElementById('posText');
   var anchors = Array.prototype.slice.call(document.querySelectorAll('.toc-anchor'));
   var headings = anchors.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
   var ticking = false;
+  var curChapter = -1;
+  function setPos(k) {
+    if (!posText || !anchors[k]) return;
+    if (k === curChapter) return;
+    curChapter = k;
+    var txt = anchors[k].textContent.trim();
+    if (txt.length > 22) txt = txt.slice(0, 22) + '…';
+    posText.textContent = '当前：' + txt;
+  }
   function onScroll() {
     ticking = false;
     var st = window.scrollY || document.documentElement.scrollTop;
     var dh = document.documentElement.scrollHeight - window.innerHeight;
     if (pbar) pbar.style.width = (dh > 0 ? Math.min(100, (st / dh) * 100) : 0) + '%';
     if (topBtn) topBtn.classList.toggle('show', st > 240);
-    // 章节高亮
+    // 章节高亮 + 顶部指示
     if (anchors.length) {
       var cur = null;
       for (var i = 0; i < headings.length; i++) {
-        if (headings[i] && headings[i].getBoundingClientRect().top <= 90) cur = i;
+        if (headings[i] && headings[i].getBoundingClientRect().top <= 96) cur = i;
       }
       if (cur === null && headings.length) cur = 0;
       anchors.forEach(function (a, k) { a.classList.toggle('active', k === cur); });
+      setPos(cur);
     }
     ticking = false;
   }
   window.addEventListener('scroll', function () { if (!ticking) requestAnimationFrame(onScroll); }, { passive: true });
   if (topBtn) topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  if (posInd) posInd.addEventListener('click', function () {
+    if (anchors[curChapter]) {
+      var h = document.getElementById(anchors[curChapter].getAttribute('href').slice(1));
+      if (h) h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
   onScroll();
 
   /* ---------- Mermaid ---------- */

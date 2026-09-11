@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="PingFang SC, Microsoft YaHei, -apple-system, sans-serif">
+  <!-- 刻滑 vs 扫雪（俯视轨迹对比） -->
+  <g>
+    <text x="250" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#dc2626">✗ 扫雪 · 推雪</text>
+    <text x="750" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#16a34a">✓ 刻滑 · 立刃走线</text>
+    <line x1="500" y1="20" x2="500" y2="400" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,6"/>
+
+    <!-- 左：扫雪 —— 宽拖痕、板横着刮推 -->
+    <g>
+      <!-- 被推开的雪带（宽条） -->
+      <path d="M 90 120 Q 150 210 90 300" fill="none" stroke="#fca5a5" stroke-width="34" stroke-linecap="round" opacity="0.5"/>
+      <!-- 板身（横向、拖拽） -->
+      <g transform="translate(150,210) rotate(-78)">
+        <ellipse rx="70" ry="18" fill="#fecaca" stroke="#dc2626" stroke-width="5"/>
+      </g>
+      <!-- 推雪箭头 -->
+      <g stroke="#dc2626" stroke-width="5" stroke-linecap="round">
+        <line x1="150" y1="210" x2="40" y2="210"/><polygon points="28,210 46,200 46,220" fill="#dc2626"/>
+      </g>
+      <text x="250" y="366" text-anchor="middle" font-size="17" fill="#dc2626">板底平推、扫出一道宽膛 → 减速打横</text>
+    </g>
+
+    <!-- 右：刻滑 —— 细长刃印弧线 -->
+    <g>
+      <!-- 刃线（细弧） -->
+      <path d="M 610 300 Q 620 200 690 150 Q 700 140 760 140" fill="none" stroke="#16a34a" stroke-width="4" stroke-dasharray="2,8" stroke-linecap="round"/>
+      <!-- 板身（立刃、切进雪里，横向朝切点） -->
+      <g transform="translate(680,190) rotate(-50)">
+        <ellipse rx="72" ry="16" fill="#bbf7d0" stroke="#16a34a" stroke-width="5"/>
+        <line x1="0" y1="0" x2="30" y2="-40" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+      </g>
+      <!-- 切入箭头 -->
+      <g stroke="#16a34a" stroke-width="5" stroke-linecap="round">
+        <line x1="680" y1="150" x2="700" y2="102"/><polygon points="707,90 693,96 707,120" fill="#16a34a"/>
+      </g>
+      <text x="750" y="366" text-anchor="middle" font-size="17" fill="#16a34a">板刃切入雪、留下一道细线 → 加速不减速</text>
+    </g>
+  </g>
+</svg>

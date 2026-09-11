@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="PingFang SC, Microsoft YaHei, -apple-system, sans-serif">
+  <!-- 教学示范：面向前方示范 vs 侧身背对 -->
+  <g>
+    <text x="250" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#dc2626">✗ 背对/侧身示范</text>
+    <text x="750" y="46" text-anchor="middle" font-size="26" font-weight="700" fill="#16a34a">✓ 面向前方示范</text>
+    <line x1="500" y1="20" x2="500" y2="400" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,6"/>
+
+    <!-- 左：教练背朝学员（转身示范，学员看不到姿态） -->
+    <g>
+      <!-- 教练(大，前)：背视 —— 头(圆)+躯干方+腿 -->
+      <g stroke="#1f2937" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="250" cy="150" r="34"/>
+        <line x1="250" y1="184" x2="250" y2="272"/>
+        <line x1="250" y1="230" x2="222" y2="292"/>
+        <line x1="250" y1="230" x2="278" y2="292"/>
+      </g>
+      <!-- 学员(小，后) -->
+      <g stroke="#1f2937" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <circle cx="250" cy="60" r="20"/>
+        <line x1="250" y1="80" x2="250" y2="130"/>
+        <line x1="250" y1="105" x2="233" y2="140"/>
+        <line x1="250" y1="105" x2="267" y2="140"/>
+      </g>
+      <!-- 背对箭头 -->
+      <g stroke="#dc2626" stroke-width="5" stroke-linecap="round">
+        <line x1="250" y1="316" x2="250" y2="356"/><polygon points="250,368 240,350 260,350" fill="#dc2626"/>
+      </g>
+      <text x="250" y="392" text-anchor="middle" font-size="15" fill="#dc2626">学员只见后背，学不到姿势细节</text>
+    </g>
+
+    <!-- 右：教练面向前方滑（学员在后面跟着看同一朝向） -->
+    <g>
+      <!-- 教练(前，绿) -->
+      <g stroke="#15803d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="750" cy="90" r="34"/>
+        <line x1="750" y1="124" x2="750" y2="212"/>
+        <line x1="750" y1="170" x2="720" y2="232"/>
+        <line x1="750" y1="170" x2="780" y2="232"/>
+        <!-- 面向前 → 手臂前伸示意行进方向 -->
+        <line x1="784" y1="150" x2="840" y2="140"/>
+        <line x1="716" y1="150" x2="660" y2="140"/>
+      </g>
+      <!-- 行进箭头 -->
+      <g stroke="#16a34a" stroke-width="5" stroke-linecap="round">
+        <line x1="750" y1="252" x2="750" y2="320"/><polygon points="750,334 738,316 762,316" fill="#16a34a"/>
+      </g>
+      <text x="750" y="392" text-anchor="middle" font-size="15" fill="#16a34a">师生同向 —— 学员能完整模仿每个动作</text>
+    </g>
+  </g>
+</svg>
